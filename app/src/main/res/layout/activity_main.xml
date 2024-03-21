@@ -1,0 +1,123 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+    <ImageView
+        android:id="@+id/imageView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:srcCompat="@drawable/c0d9726e35d3447328f4d472fa760732" />
+
+    <Button
+        android:id="@+id/generateButton"
+        android:layout_width="105dp"
+        android:layout_height="wrap_content"
+        android:layout_alignStart="@+id/resultTextView"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentBottom="true"
+        android:layout_marginStart="-23dp"
+        android:layout_marginEnd="227dp"
+        android:layout_marginBottom="552dp"
+        android:text="Generate" />
+
+    <TextView
+        android:id="@+id/textView"
+        android:layout_width="wrap_content"
+        android:layout_height="33dp"
+        android:layout_above="@+id/generateButton"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentEnd="true"
+        android:layout_marginStart="35dp"
+        android:layout_marginEnd="281dp"
+        android:layout_marginBottom="28dp"
+        android:text="Enter Age:"
+        android:textColor="#E8DFDF"
+        android:textColorHighlight="#EFE5E5"
+        android:textColorHint="#EFE7E7"
+        android:textColorLink="#E1DADA"
+        android:textSize="20sp"
+        android:textStyle="bold" />
+
+    <ImageView
+        android:id="@+id/imageView3"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentBottom="true"
+        android:layout_marginStart="57dp"
+        android:layout_marginEnd="55dp"
+        android:layout_marginBottom="267dp"
+        app:srcCompat="@drawable/download" />
+
+    <EditText
+        android:id="@+id/ageEditText"
+        android:layout_width="197dp"
+        android:layout_height="43dp"
+        android:layout_above="@+id/generateButton"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentEnd="true"
+        android:layout_marginStart="144dp"
+        android:layout_marginEnd="69dp"
+        android:layout_marginBottom="23dp"
+        android:background="#FFFFFF"
+        android:backgroundTint="#FFFFFF"
+        android:ems="10"
+        android:inputType="number" />
+
+    <EditText
+        android:id="@+id/resultTextView"
+        android:layout_width="324dp"
+        android:layout_height="122dp"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentBottom="true"
+        android:layout_marginStart="66dp"
+        android:layout_marginEnd="20dp"
+        android:layout_marginBottom="290dp"
+        android:background="@android:color/transparent"
+        android:ems="10"
+        android:inputType="text"
+        android:lines="5"
+        android:maxLines="5"
+        android:singleLine="false"
+        android:textAlignment="textStart"
+        android:textColor="#FFFFFF"
+        android:textColorHighlight="#FBFBFB"
+        android:textColorHint="#FFFCFC"
+        android:textSize="13sp"
+        android:textStyle="bold" />
+
+    <Button
+        android:id="@+id/clearButton"
+        android:layout_width="129dp"
+        android:layout_height="wrap_content"
+        android:layout_alignStart="@+id/generateButton"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentBottom="true"
+        android:layout_marginStart="169dp"
+        android:layout_marginEnd="54dp"
+        android:layout_marginBottom="552dp"
+        android:text="Clear" />
+
+    <TextView
+        android:id="@+id/textView2"
+        android:layout_width="256dp"
+        android:layout_height="wrap_content"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentBottom="true"
+        android:layout_marginStart="77dp"
+        android:layout_marginEnd="78dp"
+        android:layout_marginBottom="679dp"
+        android:text="The History App"
+        android:textColor="#8D57E6"
+        android:textColorHint="#AF3636"
+        android:textSize="34sp"
+        android:textStyle="bold" />
+
+</RelativeLayout>
