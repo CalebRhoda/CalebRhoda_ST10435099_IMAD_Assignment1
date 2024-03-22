@@ -41,7 +41,8 @@
         android:textColorHint="#EFE7E7"
         android:textColorLink="#E1DADA"
         android:textSize="20sp"
-        android:textStyle="bold" />
+        android:textStyle="bold"
+        tools:ignore="TextSizeCheck" />
 
     <ImageView
         android:id="@+id/imageView3"
@@ -71,6 +72,7 @@
         android:backgroundTint="#FFFFFF"
         android:ems="10"
         android:inputType="number"
+        android:hint="@string/hint"
         android:text="" />
 
     <EditText
@@ -93,6 +95,7 @@
         android:textColor="#FFFFFF"
         android:textColorHighlight="#FBFBFB"
         android:textColorHint="#FFFCFC"
+        android:hint="@string/output_text"
         android:textSize="13sp"
         android:text=""
         android:textStyle="bold"
@@ -120,10 +123,15 @@
         android:layout_marginStart="77dp"
         android:layout_marginEnd="78dp"
         android:layout_marginBottom="679dp"
+        android:shadowColor="#000000"
+        android:shadowDx="6"
+        android:shadowDy="3"
+        android:shadowRadius="3"
         android:text="@string/title"
         android:textColor="#8D57E6"
         android:textColorHint="#AF3636"
         android:textSize="34sp"
-        android:textStyle="bold" />
+        android:textStyle="bold"
+        tools:ignore="TextSizeCheck" />
 
 </RelativeLayout>

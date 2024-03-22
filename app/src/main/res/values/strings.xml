@@ -2,6 +2,8 @@
     <string name="app_name">My Application</string>
     <string name="title">The History App</string>
     <string name="input">Enter Age</string>
+    <string name="hint">Between 20 and 100</string>
+    <string name="output_text">The output will appear here</string>
     <string name="generate_button">Generate</string>
     <string name="clear_button">Clear</string>
     <string name="age_enter_text">Enter Age:</string>
