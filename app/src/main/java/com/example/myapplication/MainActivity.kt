@@ -20,7 +20,7 @@ class MainActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
 
-        // finding the ids in the xml file
+        // referencing the ids for the app text in the xml file
         ageEditText = findViewById(R.id.ageEditText)
         generateButton = findViewById(R.id.generateButton)
         resultTextView = findViewById(R.id.resultTextView)
@@ -43,18 +43,18 @@ class MainActivity : AppCompatActivity() {
             // checks if the inputted integer is greater than 100 or less than 20
             if (age!! <= 20) {
                 val historicalFigure = getHistoricalFigure(age)
-                resultTextView.text = historicalFigure ?: "Not within range"
+                resultTextView.text = historicalFigure ?: "Not within range (Too small)"
             } else {
                 if (age >= 100) {
                     val historicalFigure = getHistoricalFigure(age)
-                    resultTextView.text = historicalFigure ?: "Not within range"
+                    resultTextView.text = historicalFigure ?: "Not within range (Too big)"
                 }
             }
         }
     }
     // creating a private function for a list of historical figures stored in the code
-    private fun getHistoricalFigure(age: Int): String? {
-        val historicalFigures = mapOf( // creating a variable to use to get a string for an inputted number
+    private fun getHistoricalFigure(age: Int): String? { // creates a function for getting the historical figure
+        val historicalFigures = mapOf( // creating a variable for a list of strings to use to get a string for an inputted number
             84 to "You are the same age as Thomas Edison",
             95 to "You are the same age as Nelson Mandela",
             27 to "You are the same age as Kurt Cobain",
@@ -66,6 +66,6 @@ class MainActivity : AppCompatActivity() {
             71 to "You are the same age as Socrates",
             25 to "You are the same age as Tupac Shakur",
         )
-        return historicalFigures[age] // retrieves the age
+        return historicalFigures[age] // runs the function
     }
 }
