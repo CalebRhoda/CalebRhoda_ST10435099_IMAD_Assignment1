@@ -52,7 +52,7 @@ class MainActivity : AppCompatActivity() {
             }
         }
     }
-    // creating a private function for a list of historical figures stored in the code
+    // creates a module for a list of historical figures stored in the code
     private fun getHistoricalFigure(age: Int): String? { // creates a function for getting the historical figure
         val historicalFigures = mapOf( // creating a variable for a list of strings to use to get a string for an inputted number
             84 to "You are the same age as Thomas Edison",
@@ -66,6 +66,6 @@ class MainActivity : AppCompatActivity() {
             71 to "You are the same age as Socrates",
             25 to "You are the same age as Tupac Shakur",
         )
-        return historicalFigures[age] // runs the function
+        return historicalFigures[age] // returns the module
     }
 }
