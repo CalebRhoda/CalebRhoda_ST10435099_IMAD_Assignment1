@@ -7,7 +7,6 @@
     <string name="generate_button">Generate</string>
     <string name="clear_button">Clear</string>
     <string name="age_enter_text">Enter Age:</string>
-    <string name="error">Please Enter a Valid Age</string>
     <string name="background_pic">An image of a cavern for the background</string>
     <string name="foreground_pic">An image of a treeline for the image display</string>
 </resources>
