@@ -28,6 +28,12 @@ jobs:
       - name: Set current date as env variable
         run: echo "date_today=$(date +'%Y-%m-%d')" >> $GITHUB_ENV
 
+      - name: automated-build-android-app-with-github-action
+
+
+
+        uses: amirisback/automated-build-android-app-with-github-action@2.2.4
+
       # Set Repository Name As Env Variable
       - name: Set repository name as env variable
         run: echo "repository_name=$(echo '${{ github.repository }}' | awk -F '/' '{print $2}')" >> $GITHUB_ENV
