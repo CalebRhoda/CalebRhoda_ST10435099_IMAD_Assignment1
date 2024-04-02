@@ -32,23 +32,23 @@ class MainActivity : AppCompatActivity() {
             ageEditText.text.clear()
         }
         // finding the age using the generate button
-        generateButton.setOnClickListener {// the generate button waits to be clicked to run the following statements
-            val age = ageEditText.text.toString().toIntOrNull()
-            if (age != null) { // checks if there is a valid integer in the age text box
-                val historicalFigure = getHistoricalFigure(age) // creates variable for the historical figure
-                resultTextView.text = historicalFigure ?: "No historical figure found" // if the selected integer doesn't exist in the list
-            } else {
-                resultTextView.text = "Please enter a valid age" // no valid integer found
-            }
-            // checks if the inputted integer is greater than 100 or less than 20
-            if (age!! <= 20) {
-                val historicalFigure = getHistoricalFigure(age)
-                resultTextView.text = historicalFigure ?: "Not within range (Too small)"
-            } else {
-                if (age >= 100) {
+        generateButton.setOnClickListener {
+            val ageStr = ageEditText.text.toString()
+            if (ageStr.isNotEmpty()) {
+                val age = ageStr.toIntOrNull()
+                if (age != null) {
                     val historicalFigure = getHistoricalFigure(age)
-                    resultTextView.text = historicalFigure ?: "Not within range (Too big)"
+                    resultTextView.text = historicalFigure ?: "No historical figure found"
+
+                    // Check if the inputted integer is greater than 100 or less than 20
+                    if (age <= 20) {
+                        resultTextView.text = "Not within range (Too small)"
+                    } else if (age >= 100) {
+                        resultTextView.text = "Not within range (Too big)"
+                    }
                 }
+            } else {
+                resultTextView.text = "Please enter an age"
             }
         }
     }
