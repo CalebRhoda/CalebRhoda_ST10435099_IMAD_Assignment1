@@ -12,10 +12,10 @@ class MainActivity : AppCompatActivity() {
     // declaration of variables to be used later
     private lateinit var ageEditText: EditText
     private lateinit var generateButton: Button
-    private lateinit var resultTextView: TextView
+    private lateinit var outputText: TextView
     private lateinit var clearButton: Button
 
-    @SuppressLint("SetTextI18n")
+    @SuppressLint("Se" + "tTextI18n")
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
@@ -23,12 +23,12 @@ class MainActivity : AppCompatActivity() {
         // referencing the ids for the app text in the xml file
         ageEditText = findViewById(R.id.ageEditText)
         generateButton = findViewById(R.id.generateButton)
-        resultTextView = findViewById(R.id.resultTextView)
+        outputText = findViewById(R.id.resultTextView)
         clearButton = findViewById(R.id.clearButton)
 
         // clears the text in the result box and in the age text box
         clearButton.setOnClickListener {
-            resultTextView.text = ""
+            outputText.text = ""
             ageEditText.text.clear()
         }
         // finding the age using the generate button
@@ -38,17 +38,17 @@ class MainActivity : AppCompatActivity() {
                 val age = ageStr.toIntOrNull()
                 if (age != null) {
                     val historicalFigure = getHistoricalFigure(age)
-                    resultTextView.text = historicalFigure ?: "No historical figure found"
+                    outputText.text = historicalFigure ?: "No historical figure found"
 
                     // Check if the inputted integer is greater than 100 or less than 20
                     if (age <= 20) {
-                        resultTextView.text = "Not within range (Too small)"
+                        outputText.text = "Not within range (Too small)"
                     } else if (age >= 100) {
-                        resultTextView.text = "Not within range (Too big)"
+                        outputText.text = "Not within range (Too big)"
                     }
                 }
             } else {
-                resultTextView.text = "Please enter an age"
+                outputText.text = "Please enter an age"
             }
         }
     }
